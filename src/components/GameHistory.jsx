@@ -11,7 +11,9 @@ const GameHistory = () => {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await axios.get("http://localhost:5050/api/games");
+        const response = await axios.get(
+          "https://rock-paper-scissor-server.onrender.com/api/games"
+        );
         setGamehistory(response.data);
       } catch (error) {
         console.error("Error fetching game history:", error);

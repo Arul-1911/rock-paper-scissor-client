@@ -82,7 +82,10 @@ const GamePage = () => {
 
       // Sending data to the backend
       axios
-        .post("http://localhost:5050/api/games", gameData)
+        .post(
+          "https://rock-paper-scissor-server.onrender.com/api/games",
+          gameData
+        )
         .then((res) => {
           console.log(res.data);
           navigate("/history");
@@ -101,9 +104,8 @@ const GamePage = () => {
         </div>
         <div className="game-page-sub-header">
           <div style={{ color: "red" }}>Round: {currentRound}</div>
-          <div style={{ color: "blanchedalmond" }}>
-            Whose Turn :
-            {move1 === "" ? ` ${player1}'s Turn` : ` ${player2}'s Turn`}
+          <div style={{ color: "orangered" }}>
+            Now :{move1 === "" ? ` ${player1}'s Turn` : ` ${player2}'s Turn`}
           </div>
         </div>
         <div className="game-btn-container">
