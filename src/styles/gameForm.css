@@ -1,0 +1,43 @@
+.game-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #333334;
+  font-family: "sans-serif";
+}
+
+.game-form {
+  width: 400px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  border-radius: 20px;
+  height: 300px;
+}
+
+.game-form-heading {
+  text-align: center;
+}
+
+.game-form-fields-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: auto;
+  height: auto;
+  padding: 10px;
+}
+
+.form-submit-btn {
+  background-color: #2f5bab;
+}
+
+.form-submit-btn:hover {
+  background-color: #2f5bab !important;
+}
