@@ -6,6 +6,7 @@ import "../styles/gameHistory.css";
 
 const GameHistory = () => {
   const [gameHistory, setGamehistory] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchGames = async () => {
@@ -14,6 +15,8 @@ const GameHistory = () => {
         setGamehistory(response.data);
       } catch (error) {
         console.error("Error fetching game history:", error);
+      } finally {
+        setLoading(false);
       }
     };
     fetchGames();
@@ -57,6 +60,7 @@ const GameHistory = () => {
         pagination={false}
         rowKey={(record) => record.id}
         scroll={{ x: 800, y: 400 }}
+        loading={loading}
       />
     </div>
   );

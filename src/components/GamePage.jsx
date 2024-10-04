@@ -67,7 +67,7 @@ const GamePage = () => {
   };
 
   useEffect(() => {
-    if (currentRound > total_rounds) {
+    if (currentRound === total_rounds) {
       const gameData = {
         player1,
         player2,
